@@ -84,7 +84,7 @@ Reset Css
 }
 
 .containerJumbotron .container .wrapperJumbotron .leftJumbotron {
-  background-image: url("/assets/images/bgrond.png");
+  background-image: url("assets/images/bgrond.png");
   background-size: cover;
   background-position: center;
   border-radius: 20px;
