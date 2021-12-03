@@ -1,0 +1,647 @@
+/*------------
+Font import
+------------*/
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100;0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&display=swap");
+@font-face {
+  font-family: 'Work Sans', sans-serif;
+  font-family: 'Overpass', sans-serif;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Khula', sans-serif;
+}
+
+/*------------
+Reset Css
+------------*/
+*, ::before, ::after, h1, h2, p {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  transition: .5s;
+}
+
+.bold {
+  font-weight: 700;
+  color: #f636c0;
+}
+
+.navbar .container .navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar .container .navbar-brand .iconBrand {
+  width: 100%;
+}
+
+.navbar .container .navbar-brand .nameBrand {
+  font-weight: 800;
+  font-family: 'Poppins', sans-serif;
+  color: #9D91FF;
+}
+
+.navbar .container .navbar-toggler {
+  border-color: #9D91FF;
+  border-width: 4px;
+  box-shadow: none;
+}
+
+.navbar .container .navbar-collapse .navbar-nav .nav-link {
+  font-weight: 600;
+  position: relative;
+  padding: 0;
+  margin: .5rem 1rem;
+}
+
+.navbar .container .navbar-collapse .navbar-nav .nav-link::before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0px;
+  height: 4px;
+  background-color: #9D91FF;
+}
+
+.navbar .container .navbar-collapse .navbar-nav .nav-link:hover {
+  color: #9D91FF;
+}
+
+.navbar .container .navbar-collapse .navbar-nav .nav-link:hover::before {
+  width: 100%;
+}
+
+.containerJumbotron {
+  position: relative;
+}
+
+.containerJumbotron .container .wrapperJumbotron {
+  display: flex;
+}
+
+.containerJumbotron .container .wrapperJumbotron .leftJumbotron {
+  background-image: url("/assets/images/bgrond.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 20px;
+}
+
+.containerJumbotron .container .wrapperJumbotron .leftJumbotron .contentJumbotron .titleJumbotron {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: .5px;
+  margin-bottom: 64px;
+}
+
+.containerJumbotron .container .wrapperJumbotron .leftJumbotron .contentJumbotron .paragrafJumbotron {
+  color: #fff;
+  line-height: 26px;
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 44px;
+}
+
+.containerJumbotron .container .wrapperJumbotron .leftJumbotron .contentJumbotron .wrapperButton a {
+  text-decoration: none;
+  padding: .8rem 3rem;
+  border-radius: 82px;
+}
+
+.containerJumbotron .container .wrapperJumbotron .leftJumbotron .contentJumbotron .wrapperButton .buyCoin {
+  background: #f636c0;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.containerJumbotron .container .wrapperJumbotron .rightJumbotron {
+  right: 0;
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.16);
+  background: #fff;
+}
+
+.containerJumbotron .container .wrapperJumbotron .rightJumbotron img {
+  width: 100%;
+  max-width: 310px;
+  animation: iconAnimation 1.3s ease-in-out alternate infinite;
+}
+
+.containerMarket .container .nameSection {
+  text-align: center;
+  font-weight: 700;
+  color: #9D91FF;
+}
+
+.containerMarket .container .wrapperMarket {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerMarket .container .wrapperMarket .marketIcon {
+  background-color: #9D91FF;
+  border-radius: 15px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+}
+
+.containerMarket .container .wrapperMarket .marketIcon img {
+  width: 100%;
+}
+
+.containerMarket .container .wrapperMarket .marketIcon .onGoing {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.containerMarket .container .wrapperMarket .onGoing {
+  cursor: no-drop;
+}
+
+.containerHowToBuyCoin .container .nameContent {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #9D91FF;
+}
+
+.containerHowToBuyCoin .container .wrapperTutorial {
+  background: #9D91FF;
+  border-radius: 15px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.containerHowToBuyCoin .container .wrapperTutorial .list {
+  display: flex;
+  align-items: center;
+}
+
+.containerHowToBuyCoin .container .wrapperTutorial .list .icon-number {
+  background: #fff;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.containerHowToBuyCoin .container .wrapperTutorial .list .icon-number .number {
+  color: #9D91FF;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+}
+
+.containerHowToBuyCoin .container .wrapperTutorial .list .text-list p {
+  color: #fff;
+  font-weight: 500;
+  font-family: 'Khula', sans-serif;
+}
+
+.containerTokenNomic .container .header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.containerTokenNomic .container .header .iconUnisol {
+  margin-bottom: 1rem;
+}
+
+.containerTokenNomic .container .header .iconUnisol img {
+  width: 100%;
+  max-width: 64px;
+}
+
+.containerTokenNomic .container .header .nameSection {
+  font-weight: 700;
+  color: #9D91FF;
+}
+
+.containerTokenNomic .container .tokenomicRutes {
+  display: flex;
+}
+
+.containerTokenNomic .container .tokenomicRutes .tokenStepFlow {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.containerTokenNomic .container .tokenomicRutes .tokenStepFlow .iconTokeNomic {
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform .3s ease;
+}
+
+.containerTokenNomic .container .tokenomicRutes .tokenStepFlow .iconTokeNomic svg {
+  fill: #9D91FF;
+}
+
+.containerTokenNomic .container .tokenomicRutes .tokenStepFlow .iconTokeNomic:hover {
+  transform: scale(1.1);
+  transition: transform .3s ease;
+}
+
+.containerTokenNomic .container .tokenomicRutes .tokenStepFlow .infoStepFlow .nameFlow {
+  color: #9D91FF;
+  font-weight: 700;
+  font-family: 'Overpass', sans-serif;
+}
+
+.containerTokenNomic .container .tokenomicRutes .tokenStepFlow .infoStepFlow .detailInfo p {
+  font-family: 'Overpass', sans-serif;
+  font-weight: 600;
+}
+
+.containerRoadmap .container .nameContent {
+  font-weight: 700;
+  color: #9D91FF;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.containerRoadmap .container .wrapperRoadMap {
+  width: 100%;
+  position: relative;
+}
+
+.containerRoadmap .container .wrapperRoadMap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background-color: #9D91FF;
+}
+
+.containerRoadmap .container .wrapperRoadMap .lineRoadmap {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  z-index: 100;
+}
+
+.containerRoadmap .container .wrapperRoadMap .lineRoadmap:nth-child(odd) {
+  justify-content: flex-start;
+}
+
+.containerRoadmap .container .wrapperRoadMap .lineRoadmap .roadmap {
+  padding: 1.5rem 1rem;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  width: 100%;
+  max-width: 546px;
+  margin: 1.5rem 0;
+  border: 3px solid #9D91FF;
+}
+
+.containerRoadmap .container .wrapperRoadMap .lineRoadmap .roadmap::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  background-color: #9D91FF;
+}
+
+.containerRoadmap .container .wrapperRoadMap .lineRoadmap .roadmap .headTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.containerRoadmap .container .wrapperRoadMap .lineRoadmap .roadmap .headTitle .titleRoadmap {
+  font-weight: 700;
+  color: #9D91FF;
+  font-size: 28px;
+}
+
+.containerRoadmap .container .wrapperRoadMap .lineRoadmap .roadmap .headTitle .date {
+  color: rgba(0, 0, 0, 0.55);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.containerRoadmap .container .wrapperRoadMap .lineRoadmap .roadmap ul {
+  margin: 0;
+  padding: 0;
+}
+
+.containerRoadmap .container .wrapperRoadMap .lineRoadmap .roadmap ul li {
+  color: rgba(0, 0, 0, 0.55);
+  font-weight: 600;
+  line-height: 2rem;
+  list-style-position: inside;
+  font-size: 16px;
+}
+
+.containerRoadmap .container .wrapperRoadMap .lineRoadmap .roadmap .icon {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.containerRoadmap .container .wrapperRoadMap .lineRoadmap .roadmap .icon img {
+  max-width: 34px;
+  animation: iconAnimation 1s ease-in-out alternate infinite;
+}
+
+footer {
+  background-color: #9D91FF;
+  padding: 2rem;
+  color: #fff;
+  margin-top: 5rem;
+}
+
+footer .container .wrapperSocialMedia {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+footer .container .wrapperSocialMedia .sosmed {
+  margin: 0 .5rem;
+}
+
+footer .container .wrapperSocialMedia .sosmed ion-icon {
+  font-size: 42px;
+  color: #fff;
+}
+
+footer .container .wrapperSocialMedia .sosmed ion-icon:hover {
+  color: #f636c0;
+}
+
+footer .container p {
+  font-size: 14px;
+}
+
+@media screen and (min-width: 0px) {
+  .navbar .container .navbar-brand .iconBrand {
+    max-width: 70px;
+    border-radius: 50%;
+  }
+  .navbar .container .navbar-brand .nameBrand {
+    font-size: 24px;
+  }
+  .containerJumbotron .container .wrapperJumbotron {
+    flex-direction: column;
+    align-items: center;
+  }
+  .containerJumbotron .container .wrapperJumbotron .leftJumbotron {
+    padding: 84px 32px 84px 32px;
+  }
+  .containerJumbotron .container .wrapperJumbotron .leftJumbotron .contentJumbotron {
+    text-align: center;
+  }
+  .containerJumbotron .container .wrapperJumbotron .leftJumbotron .contentJumbotron .titleJumbotron {
+    margin-bottom: 1rem;
+  }
+  .containerJumbotron .container .wrapperJumbotron .rightJumbotron {
+    position: relative;
+    top: -44px;
+    display: flex;
+    width: fit-content;
+    justify-content: center;
+    padding: 1rem 2rem;
+    border-radius: 24px;
+  }
+  .containerJumbotron .container .wrapperJumbotron .rightJumbotron img {
+    max-width: 100px;
+  }
+  .containerMarket {
+    margin-bottom: 2rem;
+  }
+  .containerMarket .container .nameSection {
+    margin-bottom: 1.5rem;
+  }
+  .containerMarket .container .wrapperMarket .marketIcon {
+    margin: 0 1rem;
+  }
+  .containerMarket .container .wrapperMarket .marketIcon img {
+    max-width: 144px;
+  }
+  .containerHowToBuyCoin .container .wrapperTutorial {
+    padding: 2rem 1rem;
+  }
+  .containerHowToBuyCoin .container .wrapperTutorial .list:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+  .containerHowToBuyCoin .container .wrapperTutorial .list .icon-number {
+    margin-right: 1rem;
+    min-height: 2.3em;
+    min-width: 2.3em;
+  }
+  .containerHowToBuyCoin .container .wrapperTutorial .list .icon-number .number {
+    font-size: 16px;
+  }
+  .containerHowToBuyCoin .container .wrapperTutorial .list .text-list p {
+    font-size: 16px;
+  }
+  .containerTokenNomic {
+    padding: 3rem 0;
+  }
+  .containerTokenNomic .container .header {
+    margin-bottom: 3rem;
+  }
+  .containerTokenNomic .container .tokenomicRutes {
+    flex-direction: column;
+  }
+  .containerTokenNomic .container .tokenomicRutes .tokenStepFlow {
+    margin-bottom: 3rem;
+  }
+  .containerTokenNomic .container .tokenomicRutes .tokenStepFlow .iconTokeNomic {
+    padding: 2rem 2.5rem;
+    min-height: 132px;
+  }
+  .containerTokenNomic .container .tokenomicRutes .tokenStepFlow .iconTokeNomic svg {
+    width: 100%;
+    max-width: 52px;
+    max-height: 52px;
+  }
+  .containerTokenNomic .container .tokenomicRutes .tokenStepFlow .infoStepFlow .nameFlow {
+    margin: 1.5rem 0;
+    font-size: 22px;
+  }
+  .containerTokenNomic .container .tokenomicRutes .tokenStepFlow .infoStepFlow .detailInfo:not(:last-child) {
+    margin-bottom: .5rem;
+  }
+  .containerTokenNomic .container .tokenomicRutes .tokenStepFlow .infoStepFlow .detailInfo p {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.55);
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navbar .container .navbar-brand .iconBrand {
+    max-width: 110px;
+  }
+  .navbar .container .navbar-brand .nameBrand {
+    font-size: 38px;
+  }
+  .navbar .container .navbar-collapse .navbar-nav .nav-link {
+    font-size: 16px;
+  }
+  .containerJumbotron .container .wrapperJumbotron {
+    position: relative;
+    flex-direction: row;
+  }
+  .containerJumbotron .container .wrapperJumbotron .leftJumbotron {
+    width: 75%;
+    padding: 144px 64px 64px 64px;
+  }
+  .containerJumbotron .container .wrapperJumbotron .leftJumbotron .contentJumbotron {
+    max-width: 426px;
+    text-align: start;
+  }
+  .containerJumbotron .container .wrapperJumbotron .leftJumbotron .contentJumbotron .titleJumbotron {
+    font-size: 42px;
+    margin-bottom: 16px;
+  }
+  .containerJumbotron .container .wrapperJumbotron .leftJumbotron .contentJumbotron .paragrafJumbotron {
+    font-size: 18px;
+  }
+  .containerJumbotron .container .wrapperJumbotron .leftJumbotron .contentJumbotron .wrapperButton .daftar {
+    font-size: 14px;
+  }
+  .containerJumbotron .container .wrapperJumbotron .leftJumbotron .contentJumbotron .wrapperButton .konsultasi {
+    font-size: 14px;
+  }
+  .containerJumbotron .container .wrapperJumbotron .rightJumbotron {
+    top: 44px;
+    position: absolute;
+    border-radius: 303px 20px 20px 20px;
+    padding: 5rem;
+  }
+  .containerJumbotron .container .wrapperJumbotron .rightJumbotron img {
+    max-width: 260px;
+  }
+  .containerMarket {
+    padding: 6.25rem 0;
+    padding-bottom: 0;
+  }
+  .containerMarket .container .wrapperMarket .marketIcon img {
+    max-width: 224px;
+  }
+  .containerHowToBuyCoin {
+    padding: 6.25rem 0;
+  }
+  .containerHowToBuyCoin .container .wrapperTutorial {
+    padding: 3rem;
+  }
+  .containerHowToBuyCoin .container .wrapperTutorial .list .icon-number {
+    margin-right: 1.5rem;
+    min-height: 3em;
+    min-width: 3em;
+  }
+  .containerHowToBuyCoin .container .wrapperTutorial .list .icon-number .number {
+    font-size: 18px;
+  }
+  .containerHowToBuyCoin .container .wrapperTutorial .list .text-list p {
+    font-size: 18px;
+  }
+  .containerTokenNomic {
+    padding: 6.25rem 0;
+  }
+  .containerTokenNomic .container .header {
+    margin-bottom: 4rem;
+  }
+  .containerTokenNomic .container .tokenomicRutes {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .containerTokenNomic .container .tokenomicRutes .tokenStepFlow .iconTokeNomic {
+    padding: 2rem 3rem;
+  }
+  .containerTokenNomic .container .tokenomicRutes .tokenStepFlow .infoStepFlow .nameFlow {
+    font-size: 24px;
+  }
+  .containerTokenNomic .container .tokenomicRutes .tokenStepFlow .infoStepFlow .detailInfo:not(:last-child) {
+    margin-bottom: .8rem;
+  }
+  .containerTokenNomic .container .tokenomicRutes .tokenStepFlow .infoStepFlow .detailInfo p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .containerJumbotron .container .wrapperJumbotron .leftJumbotron .contentJumbotron {
+    max-width: 480px;
+  }
+  .containerJumbotron .container .wrapperJumbotron .leftJumbotron .contentJumbotron .titleJumbotron {
+    font-size: 48px;
+  }
+  .containerJumbotron .container .wrapperJumbotron .rightJumbotron {
+    top: 30px;
+  }
+  .containerJumbotron .container .wrapperJumbotron .rightJumbotron img {
+    max-width: 270px;
+  }
+}
+
+@media screen and (min-width: 1400px) {
+  .containerJumbotron .container .wrapperJumbotron .leftJumbotron .contentJumbotron {
+    max-width: 598px;
+  }
+  .containerJumbotron .container .wrapperJumbotron .leftJumbotron .contentJumbotron .titleJumbotron {
+    font-size: 58px;
+  }
+  .containerJumbotron .container .wrapperJumbotron .leftJumbotron .contentJumbotron .paragrafJumbotron {
+    max-width: 80%;
+  }
+  .containerJumbotron .container .wrapperJumbotron .rightJumbotron {
+    top: 20px;
+  }
+  .containerJumbotron .container .wrapperJumbotron .rightJumbotron img {
+    max-width: 300px;
+  }
+  .containerHowToBuyCoin .container .wrapperTutorial .list .icon-number {
+    margin-right: 2.5rem;
+    min-height: 3.4em;
+    min-width: 3.4em;
+  }
+  .containerHowToBuyCoin .container .wrapperTutorial .list .icon-number .number {
+    font-size: 20px;
+  }
+  .containerHowToBuyCoin .container .wrapperTutorial .list .text-list p {
+    font-size: 20px;
+    line-height: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .containerRoadmap .container .wrapperRoadMap::before {
+    display: none;
+  }
+  .containerRoadmap .container .wrapperRoadMap .lineRoadmap .roadmap::before {
+    display: none;
+  }
+}
+
+@keyframes iconAnimation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(7deg);
+  }
+}
